@@ -1,6 +1,7 @@
 # Vue Todo App
 
-Simple Todo App created in Vue.js
+Simple Todo App created in Vue.js.
+You can check the demo [here](https://konjag.github.io/vue-todo/).
 
 ## Getting Started
 
