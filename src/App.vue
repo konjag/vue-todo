@@ -1,28 +1,63 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Todo App</h1>
+    <todo-form />
+    <stats />
+    <todo-list />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Stats from "./components/Stats";
+import TodoList from "./components/TodoList";
+import TodoForm from "./components/TodoForm";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Stats,
+    TodoList,
+    TodoForm
   }
 };
 </script>
 
 <style lang="scss">
+@import "scss/variables/colors";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-background;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $color-text;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  padding: 10px;
+  margin-bottom: 100px;
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-bottom: 80px;
 }
 </style>
